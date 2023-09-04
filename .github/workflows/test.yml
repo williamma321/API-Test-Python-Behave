@@ -2,7 +2,7 @@ name: run-api-automation-test-demo
 run-name: ${{ github.actor }} is running demo automation api test with Python Behave
 on:
   push:
-	branches: [ main ]
+    branches: [ main ]
 jobs:
   runDemoAutomatedScript:
 	runs-on: ${{ matrix.os }}
