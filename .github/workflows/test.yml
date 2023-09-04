@@ -8,22 +8,22 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
-    matrix:
-      os: [ubuntu-latest]
-      python-version: ["3.11"]
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
-    	with:
+    	  with:
       	  python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-    	run: |
+    	  run: |
       	  python -m pip install --upgrade pip
       	  pip3 install -r requirements.txt
       - run: sed -i -e 's/username_holder/${{ secrets.NEWLISCLIENTID }}/g' /features/.env
       - run: sed -i -e 's/pwd_holder/${{ secrets.NEWLISSECRET }}/g' /features/.env
       - name: running the behave script
-    	working-directory:
+    	  working-directory:
       	  features/
-    	run: |
+    	  run: |
       	  behave
