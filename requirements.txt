@@ -1,4 +1,4 @@
 behave==1.2.6
 requests==2.27.1
 jsonschema==4.4.0
-dotenv==0.7.0
+python-dotenv==1.0.0
