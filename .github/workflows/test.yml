@@ -23,7 +23,5 @@ jobs:
       - run: sed -i -e 's/username_holder/${{ secrets.APIUSERNAME }}/g' features/.env
       - run: sed -i -e 's/pwd_holder/${{ secrets.APIPWD }}/g' features/.env
       - name: running the behave script
-        working-directory:
-          document-api/
         run: |
           behave
