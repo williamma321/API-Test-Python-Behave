@@ -1,3 +1,3 @@
 # API-Test-Python-Behave
-Demo project for using test tool for automated API test using Python and Behave
-The python script is running with GitHub Action
+This is a demo project showcasing automated API testing using Python and Behave as the testing tool. 
+The Python script is configured to run within the GitHub Action workflow, allowing for automated testing as part of the CI/CD process
